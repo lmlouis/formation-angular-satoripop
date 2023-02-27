@@ -1,0 +1,12 @@
+h4{
+  color:rgb(8, 26, 8);
+}
+p{
+  color:rgb(52, 99, 52);
+}
+div{
+  padding : 10px;
+  background-color:darkseagreen;
+  border: 0.25px solid rgb(101, 163, 101);
+  border-radius: 2px;
+}
