@@ -10,5 +10,6 @@ import { Component } from '@angular/core';
           }`]
 })
 export class AppComponent {
-  name = 'Max';
+  username : string = "Jean"
+
 }

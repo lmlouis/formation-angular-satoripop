@@ -9,6 +9,20 @@
       <app-warning-alert></app-warning-alert>
       <app-success-alert></app-success-alert>
     </section>
+    <hr>
+    <section>
+      <h2>Basic data biding</h2>
+      <ol>
+        <li>jouter un champ  Input  qui met à jour une popriété username via Two-Way-Biding</li>
+        <li>en sortie la propiété username via string interpolation</li>
+        <li>ajouter un bouton qui est clickable que si username is not empty</li>
+        <li>au click le bouton réinitialise le username en chaine vide </li>
+      </ol>
+
+      <input type="txt" [(ngModel)]="username">
+      <p>{{username}}</p>
+      <button class="btn btn-default" (click)="username=''"  [disabled]="username == '' ">Reset</button>
+    </section>
   </div>
 </div>
 
