@@ -23,6 +23,26 @@
       <p>{{username}}</p>
       <button class="btn btn-default" (click)="username=''"  [disabled]="username == '' ">Reset</button>
     </section>
+
+    <section>
+      <h2>Basic Directives</h2>
+      <ol>
+        <li>Bouton qui dit display-details</li>
+        <li> paragraph 'Secrete password=tuna'</li>
+        <li>afficher le paragraph avec le bouton</li>
+        <li>journaliser les clicks du bouton dans un array log</li>
+        <li> afficher le log </li>
+        <li> à partir de 5 clicks  background-cloror =  blue (ngstyle) et color = white ngclass</li>
+      </ol>
+
+      <button class="btn btn-success" (click)="onToggleSecret()">display details</button>
+      <p *ngIf="showSecret">Secrete password = tuna</p>
+      <p *ngFor="let logItem of log; index as i"
+        [ngStyle]="{backgroundColor: i+1 > 5 ? 'blue' : 'black'}"
+        [ngClass]="{ 'white-text' : i+1 > 5}">
+        <span>{{logItem}}</span>
+      </p>
+    </section>
   </div>
 </div>
 

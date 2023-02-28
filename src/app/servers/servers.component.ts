@@ -13,6 +13,10 @@ export class ServersComponent implements OnInit {
 
   serverName:String = ""
 
+  servers:String[] = ["tomcat", "apache"]
+
+  isServerCreated:boolean=false
+
 
 
   constructor() {
@@ -23,7 +27,10 @@ export class ServersComponent implements OnInit {
   }
 
   onServerCreation():void{
+    this.isServerCreated=true
+    this.servers.push(this.serverName)
     this.serverCreationStatus = "Congratulation, one server created! Server name : "+this.serverName
   }
+
 
 }
