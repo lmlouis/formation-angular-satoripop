@@ -18,10 +18,10 @@
         <li>ajouter un bouton qui est clickable que si username is not empty</li>
         <li>au click le bouton réinitialise le username en chaine vide </li>
       </ol>
-
-      <input type="txt" [(ngModel)]="username">
+      <label for="username">username</label><br>
+      <input id="username" type="text" [(ngModel)]="username">
       <p>{{username}}</p>
-      <button class="btn btn-default" (click)="username=''"  [disabled]="username == '' ">Reset</button>
+      <button class="btn btn-default" (click)="username=''"  [disabled]="username === '' ">Reset</button>
     </section>
   </div>
 </div>
